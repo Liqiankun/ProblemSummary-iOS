@@ -30,9 +30,9 @@
 ```
 #隐藏StatusBar
 ```oc
-	- (BOOL)prefersStatusBarHidden {
-	    return YES;
-	}
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 ```
 #在有输入框的时候如果不能正常显示可以用
 ```oc
@@ -76,20 +76,20 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 #根据日期得到星期
 -(NSString*)getgetWeekDay:(NSString*)dateString
 {
-	    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	    [dateFormatter setDateFormat:@"yyyy-MM-dd hh:mm"];
-	    dateFormatter.timeZone = [NSTimeZone localTimeZone];
-	    NSDate *date = [dateFormatter dateFromString:dateString];
-	
-	    NSArray *weeks=@[[NSNull null],@"星期天",@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六"];
-	    NSCalendar *calendar=[[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
-	    NSTimeZone *timeZone=[[NSTimeZone alloc]initWithName:@"Asia/Beijing"];
-	    [calendar setTimeZone:timeZone];
-	    NSCalendarUnit calendarUnit=NSWeekdayCalendarUnit;
-	    NSDateComponents *components=[calendar components:calendarUnit fromDate:date];
-	    
-	    NSString *finalDate = [NSString stringWithFormat:@"%@ (%@)",dateString,[weeks objectAtIndex:components.weekday]];
-	        return finalDate;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd hh:mm"];
+    dateFormatter.timeZone = [NSTimeZone localTimeZone];
+    NSDate *date = [dateFormatter dateFromString:dateString];
+
+    NSArray *weeks=@[[NSNull null],@"星期天",@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六"];
+    NSCalendar *calendar=[[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSTimeZone *timeZone=[[NSTimeZone alloc]initWithName:@"Asia/Beijing"];
+    [calendar setTimeZone:timeZone];
+    NSCalendarUnit calendarUnit=NSWeekdayCalendarUnit;
+    NSDateComponents *components=[calendar components:calendarUnit fromDate:date];
+    
+    NSString *finalDate = [NSString stringWithFormat:@"%@ (%@)",dateString,[weeks objectAtIndex:components.weekday]];
+        return finalDate;
 	
 }
 #添加PCH文件
