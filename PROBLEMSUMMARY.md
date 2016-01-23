@@ -92,3 +92,5 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 	        return finalDate;
 	
 	}
+#添加PCH文件
+先创建`pronuciationApp-Prefix.pch`文件，在`BuildSetting`里`Prefix Header`里添加`$(SRCROOT)/pronuciationApp/pronuciationApp-Prefix.pch`
