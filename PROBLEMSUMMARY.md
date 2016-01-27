@@ -100,3 +100,6 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 
 #时间格式
 在处理时间时一定要和后端协调好时间格式。
+
+#主色调
+在`PCH`里添加App的主色调，方便开发调用。
