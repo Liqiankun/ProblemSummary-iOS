@@ -99,4 +99,4 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 先创建`pronuciationApp-Prefix.pch`文件，在`BuildSetting`里`Prefix Header`里添加`$(SRCROOT)/pronuciationApp/pronuciationApp-Prefix.pch`
 
 #时间格式
-在处理时间时一定要和后端协调和时间格式。
+在处理时间时一定要和后端协调好时间格式。
