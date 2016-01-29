@@ -103,3 +103,6 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 
 #主色调
 在`PCH`里添加App的主色调，方便开发调用。
+
+#项目文件结构重构
+如果你在整理项目文件的重构提交时前往不要`git checkout -- projectName.xcodeproj/project.pbxproj`要不就毁了！
