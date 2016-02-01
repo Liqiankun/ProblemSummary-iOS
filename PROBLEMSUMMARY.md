@@ -114,8 +114,14 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 如果iOS8的API在iOS9上有更新。
 ```OC
 #ifdef __IPHONE_9_0
-//如果是IOS9之后的系统执行这里的方法
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+	//如果是IOS9之后的系统执行这个方法
+}
 #else
-//如果是IOS9之前的系统执行这里的方法
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+	//如果IOS9之前的系统执行这个方法
+}
 #endif
 ```
