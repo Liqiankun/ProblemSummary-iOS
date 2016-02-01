@@ -109,3 +109,13 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 
 #第三方库的使用
 在开发中使用第三方库如果库更新很频繁一定要有自己的方法，要不很难搞。比如[AFNetworking](https://github.com/AFNetworking/AFNetworking)最近从2.0升级到了3.0，如果你没各类都用了怎么改，改死你。
+
+#iOS系统适配问题
+如果iOS8的API在iOS9上有更新。
+```OC
+#ifdef __IPHONE_9_0
+//如果是IOS9之后的系统执行这里的方法
+#else
+//如果是IOS9之前的系统执行这里的方法
+#endif
+```
