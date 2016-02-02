@@ -127,3 +127,14 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```
 #下载模拟器慢怎么办
 如果在Xcode下载很慢（肯定很慢），可以在百度云或者CocoaChina下载，然后放在Xcode里。操作为`sudo -s`创建权限，`mkdir -p  /Library/Developer/CoreSimulator/Profiles/Runtimes/`创建目录，`cp -R  {模拟器路径}  /Library/Developer/CoreSimulator/Profiles/Runtimes/{模拟器}`复制。具体参考[下载模拟器](http://blog.csdn.net/zhangao0086/article/details/38491271)
+
+#关于开发中的`NSLog`
+在开发中我们经常回会用到`NSLog`，但是在`NSLog`是比较耗费性能的，我们要在上线时去掉。但是软件开发过程中我们还需要测试。
+```oc
+#ifdef DEBUG // 处于开发阶段
+#define DLLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define DLLog(...)
+#endif
+这样在`DEBUG`时`DLLog`是有效的，在`REALSE`版本中`DLLog`就是无效的。
+```
