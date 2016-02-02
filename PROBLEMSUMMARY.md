@@ -126,4 +126,4 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 #endif
 ```
 #下载模拟器慢怎么办
-如果在Xcode下载很慢（不用想肯定很慢），可以在百度云或者CocoaChina下载，然后放在Xcode里。操作为`sudo -s`创建权限，`mkdir -p  /Library/Developer/CoreSimulator/Profiles/Runtimes/`创建目录，`cp -R  {模拟器路径}  /Library/Developer/CoreSimulator/Profiles/Runtimes/{模拟器}`复制。具体参考[下载模拟器](http://blog.csdn.net/zhangao0086/article/details/38491271)
+如果在Xcode下载很慢（肯定很慢），可以在百度云或者CocoaChina下载，然后放在Xcode里。操作为`sudo -s`创建权限，`mkdir -p  /Library/Developer/CoreSimulator/Profiles/Runtimes/`创建目录，`cp -R  {模拟器路径}  /Library/Developer/CoreSimulator/Profiles/Runtimes/{模拟器}`复制。具体参考[下载模拟器](http://blog.csdn.net/zhangao0086/article/details/38491271)
