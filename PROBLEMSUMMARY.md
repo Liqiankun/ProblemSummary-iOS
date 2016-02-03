@@ -150,3 +150,5 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
   [paragraphStyle setLineSpacing:5];//调整行间距
   [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, String.length)];
 ```
+#版本适配测
+如果你的项目支持iOS8和iOS9,测试一定要在Xcode6和Xcode7同时测试你的应用，然后是真机。
