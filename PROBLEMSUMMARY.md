@@ -138,3 +138,6 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 #endif
 ```
 这样在`DEBUG`时`DLLog`是有效的，在`REALSE`版本中`DLLog`就是无效的。
+
+#关于测试
+上线之前一定要测试，完整的测试。包括之前的功能，登录和未登录状态下测试。
