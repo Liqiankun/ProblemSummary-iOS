@@ -166,6 +166,5 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
         }
     });
     return class;
-
 }
 ```
