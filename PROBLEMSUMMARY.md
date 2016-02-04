@@ -168,3 +168,5 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
     return class;
 }
 ```
+#类名之前怎么加默认前缀
+在`Target`->右边栏`Class Prefix`,添加自己的前缀即可。
