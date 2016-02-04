@@ -152,3 +152,20 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```
 #版本适配测
 如果你的项目支持iOS8和iOS9,测试一定要在Xcode6和Xcode7同时测试你的应用，然后是真机。
+
+#单例的创建
+```oc
++(id)manager
+{
+    static ClassName *class = nil;
+    static dispatch_once_t classManager;
+    //dispath_once:Executes a block object once and only once for the lifetime of an application
+    dispatch_once(&classManager, ^{
+        if (!class) {
+            class = [[ClassName alloc] init];
+        }
+    });
+    return class;
+
+}
+```
