@@ -174,12 +174,12 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 #照片大小处理
 在上传图片时速度很慢造成体验很差，一般上传照片都要进行压缩。
 ```oc
-	 //处理图片
-            NSData *data = UIImageJPEGRepresentation(self.uploadImage, 1.0);
-            NSUInteger imageDataLength = [data length] / 1024;
-            if (imageDataLength > 100) {
-                CGFloat compressionQuality = (CGFloat) ((100 * 4)/ imageDataLength);
-                data = UIImageJPEGRepresentation(self.uploadImage, compressionQuality);
-            }
+	//处理图片
+        NSData *data = UIImageJPEGRepresentation(self.uploadImage, 1.0);
+        NSUInteger imageDataLength = [data length] / 1024;
+        	if (imageDataLength > 100) {
+        	CGFloat compressionQuality = (CGFloat) ((100 * 4)/ imageDataLength);
+        	data = UIImageJPEGRepresentation(self.uploadImage, compressionQuality);
+        }
 
 ```
