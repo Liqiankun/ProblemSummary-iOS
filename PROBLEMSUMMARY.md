@@ -149,7 +149,7 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
             
   [paragraphStyle setLineSpacing:5];//调整行间距
   [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, String.length)];
-```
+```赵成
 #版本适配测
 如果你的项目支持iOS8和iOS9,测试一定要在Xcode6和Xcode7同时测试你的应用，然后是真机。
 
@@ -170,3 +170,16 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```
 #类名之前怎么加默认前缀
 在`Target`->右边栏`Class Prefix`,添加自己的前缀即可。
+
+#照片大小处理
+在上传图片时速度很慢造成体验很差，一般上传照片都要进行压缩。
+```oc
+	 //处理图片
+            NSData *data = UIImageJPEGRepresentation(self.uploadImage, 1.0);
+            NSUInteger imageDataLength = [data length] / 1024;
+            if (imageDataLength > 100) {
+                CGFloat compressionQuality = (CGFloat) ((100 * 4)/ imageDataLength);
+                data = UIImageJPEGRepresentation(self.uploadImage, compressionQuality);
+            }
+
+```
