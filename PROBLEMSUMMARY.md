@@ -183,4 +183,4 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
         }
 
 ```
-这样图片的大小就可以减小从而提高用户体验。
+这样图片的大小就可以减小从而提高用户体验。但是还有一个`[data bytes]`方法有待探索。
