@@ -199,3 +199,5 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
     self.selectedButton = button;
 }
 ```
+#在真机运行时出现Bitcode错误提示
+在`Build Setting`设置`Enable Bitcode`为`NO`。
