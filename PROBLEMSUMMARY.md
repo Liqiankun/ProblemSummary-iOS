@@ -29,6 +29,12 @@
     
 }
 ```
+```oc
+    cell.separatorInset = UIEdgeInsetsZero;
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+```
 #隐藏StatusBar
 ```oc
 - (BOOL)prefersStatusBarHidden {
