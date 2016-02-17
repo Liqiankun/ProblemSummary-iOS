@@ -77,6 +77,10 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
     }
 ```
 
+```oc
+[self.navigationController.navigationBar setShadowImage:[UIImage new]];
+```
+
 #UIImageView问题
 当有UIImageView有动画时不要添加手势事件
 
