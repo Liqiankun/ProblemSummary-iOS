@@ -206,4 +206,4 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 #在真机运行时出现Bitcode错误提示
 在`Build Setting`设置`Enable Bitcode`为`NO`。
 #字典转模型注意事项
-模型中的Key名字要和字典中的Key一模一样。最好的模型里写上`-(void)setValue:(id)value forUndefinedKey:(NSString *)key`。当然可以用第三方框架[MJExtension](https://github.com/CoderMJLee/MJExtension)实现模型和字典互转。
+模型中的Key名字要和字典中的Key一模一样。方法为`[model setValuesForKeysWithDictionary:dictionary]`最好的模型里写上`-(void)setValue:(id)value forUndefinedKey:(NSString *)key`。当然可以用第三方框架[MJExtension](https://github.com/CoderMJLee/MJExtension)实现模型和字典互转。
