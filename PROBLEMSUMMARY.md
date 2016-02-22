@@ -209,3 +209,8 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 模型中的Key名字要和字典中的Key一模一样。方法为`[model setValuesForKeysWithDictionary:dictionary]`最好的模型里写上`-(void)setValue:(id)value forUndefinedKey:(NSString *)key`。当然可以用第三方框架[MJExtension](https://github.com/CoderMJLee/MJExtension)实现模型和字典互转。
 #元数据
 程序中有元数据时，最好设计成为单例和只读模式。
+#NSValue装CGRect
+```oc
+	NSValue *value = [NSValue valueWithCGRect:CGRectZero];
+	CGRect rect = [value CGRectValue];
+```
