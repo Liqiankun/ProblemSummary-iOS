@@ -214,3 +214,7 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 	NSValue *value = [NSValue valueWithCGRect:CGRectZero];
 	CGRect rect = [value CGRectValue];
 ```
+#OC中取出string中的数字
+```oc
+ NSRange rang = [text rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet]];
+```
