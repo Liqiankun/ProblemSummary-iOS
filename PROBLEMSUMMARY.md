@@ -216,5 +216,5 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```
 #OC中取出string中的数字
 ```oc
- NSRange rang = [text rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet]];
+ NSRange rang = [string rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet]];
 ```
