@@ -219,4 +219,4 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
  NSRange rang = [string rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet]];
 ```
 #开发中window添加子控件问题
-在没有UINavigationController的情况下[[UIApplacation shareApplication].windows lastObject]添加不上子控件。
+在没有UINavigationController的情况下`[[UIApplacation shareApplication].windows lastObject]`添加不上子控件。
