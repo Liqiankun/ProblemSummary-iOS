@@ -220,3 +220,12 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```
 #开发中window添加子控件问题
 在没有UINavigationController的情况下`[[UIApplacation shareApplication].windows lastObject]`添加不上子控件。
+#开发中操作UINavigationController栈里的ViewControllers
+```oc
+	  NSMutableArray *viewControllerArray = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+    [viewControllerArray removeObjectAtIndex:viewControllerArray.count - 1];
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    [viewControllerArray addObject:vc];
+    [self.navigationController setViewControllers:viewControllerArray];
+```
