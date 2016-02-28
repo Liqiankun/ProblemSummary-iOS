@@ -229,3 +229,5 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
     [viewControllerArray addObject:vc];
     [self.navigationController setViewControllers:viewControllerArray];
 ```
+#代理
+在使用代理时属性最好写成weak。
