@@ -231,3 +231,8 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```
 #代理
 在使用代理时属性最好写成weak。
+#OC里的数据过滤器
+```oc
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains %@",@"david"];
+    NSArray *name = [allCities filteredArrayUsingPredicate:predicate];
+```
