@@ -236,3 +236,11 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains %@",@"david"];
     NSArray *name = [allCities filteredArrayUsingPredicate:predicate];
 ```
+#判断对象是否相等
+```oc
+ 	- (BOOL)isEqual:(HMDeal *)other
+	{
+    	return [self.deal_id isEqualToString:other.deal_id];
+	}
+
+```
