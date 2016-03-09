@@ -244,3 +244,13 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 	}
 
 ```
+# 通过经纬度获取城市
+```oc
+    CLGeocoder *geocoder;
+    // 获得城市名称
+    [self.geocoder reverseGeocodeLocation:userLocation.location completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (placemarks.count == 0) return;
+        CLPlacemark *placemark = [placemarks firstObject];
+        NSString *city = placemark.addressDictionary[@"State"];
+    }];
+```
