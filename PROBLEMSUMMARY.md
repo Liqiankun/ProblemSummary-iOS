@@ -254,3 +254,17 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
         NSString *city = placemark.addressDictionary[@"State"];
     }];
 ```
+# 图片剪切
+```oc
+- (UIImage *)imageWithRoundedCornersSize:(float)cornerRadius usingImage:(UIImage *)original
+{
+    CGRect frame = CGRectMake(0, 0, original.size.width, original.size.height);
+    UIGraphicsBeginImageContextWithOptions(original.size, NO, 1.0);
+    [[UIBezierPath bezierPathWithRoundedRect:frame cornerRadius:cornerRadius] addClip];
+    [original drawInRect:frame];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+```
