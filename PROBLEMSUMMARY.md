@@ -268,3 +268,7 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
     return image;
 }
 ```
+# UIButton去高亮
+```oc
+	button.adjustsImageWhenHightlighted = NO;
+```
