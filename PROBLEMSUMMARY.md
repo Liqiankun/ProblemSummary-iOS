@@ -273,4 +273,4 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 	button.adjustsImageWhenHightlighted = NO;
 ```
 # 程序的扩展性
-在设计程序和写代码是要考虑全面，是程序能适应多种环境。
+在设计程序和写代码时要考虑全面，是程序能适应多种环境。
