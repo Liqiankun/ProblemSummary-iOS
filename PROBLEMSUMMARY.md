@@ -274,3 +274,8 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```
 # 程序的扩展性
 在设计程序和写代码时要考虑全面，是程序能适应多种环境。
+
+# cell的坐标装换
+```oc
+	CGRect framn = [self.tableView convertRect:cell.frame toView:self.view];
+```
