@@ -279,3 +279,12 @@ if ([navigationController.navigationBar respondsToSelector:@selector( setBackgro
 ```oc
 	CGRect framn = [self.tableView convertRect:cell.frame toView:self.view];
 ```
+#在使用[SDAutoLayout](https://github.com/gsdios/SDAutoLayout)注意事项
+cell的高度自适应的时候要写成
+```oc
+	[self setupAutoHeightWithBottomView:bottomView bottomMargin:cellMargin];
+```
+ 不能写成
+ ```oc
+ 	[self.conentView setupAutoHeightWithBottomView:bottomView bottomMargin:cellMargin];
+ ```
