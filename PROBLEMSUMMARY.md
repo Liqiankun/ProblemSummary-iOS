@@ -288,3 +288,5 @@ cell的高度自适应的时候要写成
  ```oc
  	[self.conentView setupAutoHeightWithBottomView:bottomView bottomMargin:cellMargin];
  ```
+# git使用技巧
+如果本地的文件没有Git，可以现在本地创建新的分支，然后把没有Git的文件拷贝到新的分支然后PUSH。
