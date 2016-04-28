@@ -291,5 +291,5 @@ cell的高度自适应的时候要写成
 # git使用技巧
 如果本地的文件没有Git，可以现在本地创建新的分支，然后把没有Git的文件拷贝到新的分支然后PUSH。
 
-#git使用
+#git删除远程分支
 删除远程分支 git push origin :`branchName`
