@@ -293,3 +293,8 @@ cell的高度自适应的时候要写成
 
 #git删除远程分支
 删除远程分支 git push origin :`branchName`
+
+#自定义有方法名字的打印
+```oc
+	#define DLLog(...) NSLog(@"%s %@",__func__,[NSString stringWithFormat:__VA_ARGS__])
+```
