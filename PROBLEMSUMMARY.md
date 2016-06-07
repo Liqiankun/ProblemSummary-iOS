@@ -298,3 +298,27 @@ cell的高度自适应的时候要写成
 ```oc
 	#define DLLog(...) NSLog(@"%s %@",__func__,[NSString stringWithFormat:__VA_ARGS__])
 ```
+#XIB设置透明度
+在开发中用到XIB最好不要XIB设置控件的透明度，可能会造成子控件透明度变化。最好在代码中设置。
+
+#子控件超出父控件部分不能响应用户点击
+```oc
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (self.clipsToBounds || self.hidden || (self.alpha == 0.f)) {
+        return nil;
+    }
+    UIView *result = [super hitTest:point withEvent:event];
+    if (result) {
+        return result;
+    }
+    for (UIView *subview in self.subviews.reverseObjectEnumerator) {
+        CGPoint subPoint = [subview convertPoint:point fromView:self];
+        result = [subview hitTest:subPoint withEvent:event];
+        if (result) {
+            return result;
+        }
+    }
+    return nil;
+}
+
+```
