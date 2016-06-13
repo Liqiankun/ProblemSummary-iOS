@@ -322,3 +322,11 @@ cell的高度自适应的时候要写成
 }
 
 ```
+#怎么检测String中是否有网络链接
+```oc
+    NSString *linkString = @"现在下午一点半www.aihehuo.com";
+    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
+    NSRange range = NSMakeRange(0, linkString.length);
+    NSArray *matches = [detector matchesInString:linkString options:0 range:range];
+    NSLog(@"%@",matches.firstObject);
+```
