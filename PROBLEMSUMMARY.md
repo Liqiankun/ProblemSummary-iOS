@@ -330,3 +330,5 @@ cell的高度自适应的时候要写成
     NSArray *matches = [detector matchesInString:linkString options:0 range:range];
     NSLog(@"%@",matches.firstObject);
 ```
+#图片的压缩问题
+在是用系统的`UIImageJPEGRepresentation(image, compressionQuality)`是不行的他的结果和参数compressionQuality不成一定比例。这个时候我们就要用图片的分辨率压缩方法来解决准备个问题。
