@@ -332,3 +332,8 @@ cell的高度自适应的时候要写成
 ```
 #图片的压缩问题
 在是用系统的`UIImageJPEGRepresentation(image, compressionQuality)`是不行的他的结果和参数compressionQuality不成一定比例。这个时候我们就要用图片的分辨率压缩方法来解决个问题。
+#怎么删除字符串开头，结尾的空格和换行
+```oc
+   NSString *strOne = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
+   NSString *strTwo=[strOne stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+```
