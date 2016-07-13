@@ -337,7 +337,7 @@ cell的高度自适应的时候要写成
    NSString *strOne = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
    NSString *strTwo=[strOne stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 ```
-#怎么设置NavigationBar标题的颜色
+#怎么设置NavigationBar标题的颜色(如果在AppDelegate中 [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar_backgroundImage"] forBarMetrics:UIBarMetricsDefault];那么其他页面设置BarTintColor无效)
 ```oc
  [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 ```
