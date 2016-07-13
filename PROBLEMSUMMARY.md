@@ -337,3 +337,7 @@ cell的高度自适应的时候要写成
    NSString *strOne = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
    NSString *strTwo=[strOne stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 ```
+#怎么设置NavigationBar标题的颜色
+```oc
+ [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+```
