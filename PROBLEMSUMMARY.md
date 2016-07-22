@@ -342,3 +342,14 @@ cell的高度自适应的时候要写成
 //如果在AppDelegate中 [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar_backgroundImage"] forBarMetrics:UIBarMetricsDefault];那么其他页面设置BarTintColor无效
  [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 ```
+#怎么限制UITextField字数限制
+```oc
+[self.phoneNumberFextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+
+-(void)textFieldDidChange:(UITextField *)textField
+{
+    if (textField.text.length > 11) {
+            textField.text = [textField.text substringToIndex:11];
+    }
+}
+```
