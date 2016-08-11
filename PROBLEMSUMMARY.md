@@ -353,3 +353,11 @@ cell的高度自适应的时候要写成
     }
 }
 ```
+#UIDatePicker设置时间限制
+```oc
+	NSDate *todaysDate = [NSDate date];
+        NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        NSDateComponents *maxDateComponents = [[NSDateComponents alloc] init];
+        [maxDateComponents setYear:-14];
+        NSDate *maxDate = [gregorian dateByAddingComponents:maxDateComponents toDate:todaysDate  options:0];
+```
