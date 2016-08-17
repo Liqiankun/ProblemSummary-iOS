@@ -361,3 +361,5 @@ cell的高度自适应的时候要写成
         [maxDateComponents setYear:-14];
         NSDate *maxDate = [gregorian dateByAddingComponents:maxDateComponents toDate:todaysDate  options:0];
 ```
+#解决由于数据为NULL造成的程序崩溃
+可以用这个[NullSafe](https://github.com/nicklockwood/NullSafe)解决这问题
