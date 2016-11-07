@@ -363,3 +363,5 @@ cell的高度自适应的时候要写成
 ```
 #解决由于数据为NULL造成的程序崩溃
 可以用这个[NullSafe](https://github.com/nicklockwood/NullSafe)解决这问题
+#git提交是出现`Could not read from remote repository`
+这个问题一般是没有访问远程权限的问题
