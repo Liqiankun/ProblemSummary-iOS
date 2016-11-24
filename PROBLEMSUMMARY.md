@@ -365,3 +365,11 @@ cell的高度自适应的时候要写成
 可以用这个[NullSafe](https://github.com/nicklockwood/NullSafe)解决这问题
 ##git提交是出现`Could not read from remote repository`
 这个问题一般是没有访问远程权限的问题
+##人脸识别
+```OC
+	CIDetector *faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace
+                                                  context:nil
+                                                  options:@{CIDetectorAccuracy: CIDetectorAccuracyLow}];
+    CIImage *ciimg = [CIImage imageWithCGImage:faceImag.CGImage];
+    NSArray *features = [faceDetector featuresInImage:ciimg];
+```
