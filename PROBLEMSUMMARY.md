@@ -373,3 +373,5 @@ cell的高度自适应的时候要写成
     CIImage *ciimg = [CIImage imageWithCGImage:faceImag.CGImage];
     NSArray *features = [faceDetector featuresInImage:ciimg];
 ```
+## 用storyBoard创建的Static tableView修改tableViewHeader的高度
+只需要在tableHeaderView上添加一个View然后修改view的frame
