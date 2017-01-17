@@ -10,7 +10,7 @@ maskLayer.path = maskPath.CGPath;
 self.backgroundImageView.layer.mask = maskLayer;
 ```
 
-##  [ViewController  respondsToSelector:]; message sent to deallocated instance
+##  [ViewController respondsToSelector:]: message sent to deallocated instance
 
 出现这个问题要把ViewController中子控件delegate为ViewController的在dealloc方法中设置为nil。（我是在WKWebView中遇到，然后只有在IOS8才有问题）
 
