@@ -19,3 +19,8 @@ self.backgroundImageView.layer.mask = maskLayer;
   self.delegateView.delegate = nil;
 }
 ```
+## 全局设置UIBarButtonItem时排除其他地方的Item
+
+```
+[[UIBarButtonItem appearanceWhenContainedIn:[UINavigationController class], nil] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateDisabled];
+```
