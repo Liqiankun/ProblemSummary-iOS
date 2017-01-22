@@ -24,3 +24,6 @@ self.backgroundImageView.layer.mask = maskLayer;
 ```
 [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationController class], nil] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateDisabled];
 ```
+## Keywindow上添加控件和原生AlertView冲突
+
+当Keywindow上还有自定义的控件时不能调用远程AlertView会造成闪退
