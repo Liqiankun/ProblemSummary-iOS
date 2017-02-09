@@ -27,3 +27,7 @@ self.backgroundImageView.layer.mask = maskLayer;
 ## Keywindow上添加控件和原生AlertView冲突
 
 当Keywindow上还有自定义的控件时不能调用远程AlertView会造成闪退
+
+## UILabel显示问题
+
+如果UILabel的Size不是整数时，设置背景颜色会出现边缘黑线。
