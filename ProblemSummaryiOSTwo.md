@@ -31,3 +31,12 @@ self.backgroundImageView.layer.mask = maskLayer;
 ## UILabel显示问题
 
 如果UILabel的Size不是整数时，设置背景颜色会出现边缘黑线。
+
+## 用XIB创建的View在iPhone5s iOS8上显示错乱
+
+```
+    UIXIBView *XIBView = [UIXIBView XIBView];
+    XIBView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 216);
+    [XIBView layoutIfNeeded];
+```
+
