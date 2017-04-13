@@ -40,3 +40,9 @@ self.backgroundImageView.layer.mask = maskLayer;
     [XIBView layoutIfNeeded];
 ```
 
+## tableView设置SeparatorLine颜色
+
+```
+[self.tableView setSeparatorColor:[UIColor myColor]];
+```
+
